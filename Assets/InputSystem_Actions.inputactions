@@ -1,0 +1,253 @@
+{
+    "name": "InputSystem_Actions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "351f2ccd-1f9f-44bf-9bec-d62ac5c5f408",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000001",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CeilingGrip",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000002",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AcidVenom",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000003",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Symbiosis",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000004",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BioRhythm",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000005",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000006",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Inventory",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000007",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Map",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000008",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Journal",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000009",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "a1b2c3d4-0001-0000-0000-000000000010",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000001",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000002",
+                    "path": "<Keyboard>/w",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000003",
+                    "path": "<Keyboard>/s",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000004",
+                    "path": "<Keyboard>/a",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000005",
+                    "path": "<Keyboard>/d",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrow Keys",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000011",
+                    "path": "2DVector",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000012",
+                    "path": "<Keyboard>/upArrow",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000013",
+                    "path": "<Keyboard>/downArrow",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000014",
+                    "path": "<Keyboard>/leftArrow",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000015",
+                    "path": "<Keyboard>/rightArrow",
+                    "groups": "Keyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000016",
+                    "path": "<Gamepad>/leftStick",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1b2c3d4-0001-0000-0000-000000000017",
+                    "path": "<Gamepad>/dpad",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000001", "path": "<Keyboard>/z", "groups": "Keyboard", "action": "Jump", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000002", "path": "<Keyboard>/space", "groups": "Keyboard", "action": "Jump", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000003", "path": "<Gamepad>/buttonSouth", "groups": "Gamepad", "action": "Jump", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000011", "path": "<Keyboard>/upArrow", "groups": "Keyboard", "action": "CeilingGrip", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000012", "path": "<Gamepad>/leftShoulder", "groups": "Gamepad", "action": "CeilingGrip", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000021", "path": "<Keyboard>/x", "groups": "Keyboard", "action": "AcidVenom", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000022", "path": "<Gamepad>/buttonWest", "groups": "Gamepad", "action": "AcidVenom", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000031", "path": "<Keyboard>/c", "groups": "Keyboard", "action": "Symbiosis", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000032", "path": "<Gamepad>/buttonNorth", "groups": "Gamepad", "action": "Symbiosis", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000041", "path": "<Keyboard>/v", "groups": "Keyboard", "action": "BioRhythm", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000042", "path": "<Gamepad>/rightShoulder", "groups": "Gamepad", "action": "BioRhythm", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000051", "path": "<Keyboard>/f", "groups": "Keyboard", "action": "Interact", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000052", "path": "<Gamepad>/buttonEast", "groups": "Gamepad", "action": "Interact", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000061", "path": "<Keyboard>/i", "groups": "Keyboard", "action": "Inventory", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000062", "path": "<Gamepad>/select", "groups": "Gamepad", "action": "Inventory", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000071", "path": "<Keyboard>/m", "groups": "Keyboard", "action": "Map", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000081", "path": "<Keyboard>/j", "groups": "Keyboard", "action": "Journal", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000091", "path": "<Keyboard>/escape", "groups": "Keyboard", "action": "Pause", "isComposite": false, "isPartOfComposite": false },
+                { "name": "", "id": "c1b2c3d4-0001-0000-0000-000000000092", "path": "<Gamepad>/start", "groups": "Gamepad", "action": "Pause", "isComposite": false, "isPartOfComposite": false }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [ { "devicePath": "<Keyboard>", "isOptional": false, "isOR": false } ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [ { "devicePath": "<Gamepad>", "isOptional": false, "isOR": false } ]
+        }
+    ]
+}
