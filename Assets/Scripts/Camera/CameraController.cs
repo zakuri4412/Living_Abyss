@@ -89,9 +89,15 @@ namespace LivingAbyss.Camera
             // Smooth vertical — simple lerp
             _pos.y = Mathf.Lerp(_pos.y, goalY, _speedY * dt);
 
-            // Clamp to room bounds
             if (_useBounds)
+            {
+                float preClampX = _pos.x;
                 _pos = ClampToBounds(_pos);
+                // Kill accumulated SmoothDamp velocity when hitting a horizontal wall;
+                // stale velocity causes the camera to bounce away from the boundary.
+                if (!Mathf.Approximately(_pos.x, preClampX))
+                    _velocityX = 0f;
+            }
 
             _pos.z = -10f;
             transform.position = _pos;
@@ -122,11 +128,19 @@ namespace LivingAbyss.Camera
             float diff    = playerY - _targetY;
 
             if (Mathf.Abs(diff) > _deadzoneY)
-            {
-                // Player left the band — start following, push the band edge
                 _targetY = playerY - Mathf.Sign(diff) * _deadzoneY;
+
+            // Clamp _targetY to the achievable camera range BEFORE lerping.
+            // Without this, the target overshoots the bound during a jump and then
+            // snaps back hard when the player lands — causing the jitter.
+            if (_useBounds)
+            {
+                float minCamY = _roomBounds.min.y + CAM_HALF_H;
+                float maxCamY = _roomBounds.max.y - CAM_HALF_H;
+                _targetY = minCamY <= maxCamY
+                    ? Mathf.Clamp(_targetY, minCamY, maxCamY)
+                    : (minCamY + maxCamY) * 0.5f; // room smaller than camera — lock Y
             }
-            // Inside deadzone: _targetY stays put
         }
 
         // ── Room bounds ───────────────────────────────────────────────────────
@@ -165,12 +179,20 @@ namespace LivingAbyss.Camera
         public void SnapToTarget()
         {
             if (_target == null) return;
-            _pos       = _target.position;
-            _pos.z     = -10f;
-            _targetY   = _target.position.y;
+            _pos        = _target.position;
+            _pos.z      = -10f;
+            _targetY    = _target.position.y;
             _lookaheadX = 0f;
             _velocityX  = 0f;
-            if (_useBounds) _pos = ClampToBounds(_pos);
+            if (_useBounds)
+            {
+                _pos = ClampToBounds(_pos);
+                float minCamY = _roomBounds.min.y + CAM_HALF_H;
+                float maxCamY = _roomBounds.max.y - CAM_HALF_H;
+                _targetY = minCamY <= maxCamY
+                    ? Mathf.Clamp(_targetY, minCamY, maxCamY)
+                    : (minCamY + maxCamY) * 0.5f;
+            }
             transform.position = _pos;
         }
 
